@@ -108,8 +108,8 @@ h2 {
 }
 
 /* Projects */
-#project {
-    margin: 0;
+#copyright-timer {
+    background-image: url("../images/copyright-timer-preview.png");
 }
 
 /* Footer */
@@ -125,9 +125,9 @@ footer {
 }
 
 footer p {
-    display: flex;
+    display: inline-block;
     flex: 1;
-    margin: 25px 5vw;
+    margin: 25px 6vw;
     list-style: none;
     text-decoration-line: none;
 }
@@ -162,7 +162,7 @@ footer a:hover {
     }
     .title {
         width: 150px;
-        border-right: 12px solid var(--border-outline);
+        border-right: 8px solid var(--border-outline);
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px ;
     }
@@ -193,11 +193,11 @@ footer a:hover {
     }
     .title {
         width: 125px;
-        border-right: 6px solid var(--border-outline);
+        border-right: 5px solid var(--border-outline);
         border-top-right-radius: 3px;
         border-bottom-right-radius: 3px ;
     }
     footer {
-        font-size: 18px;
+        font-size: 16px;
     }
   }
