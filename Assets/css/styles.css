@@ -1,29 +1,28 @@
 :root {
     --border-outline: #04AA6D;
-    --bg-color: rgb(94, 94, 94);
-
+    --bg-dark: rgb(94, 94, 94);
+    --bg-light: rgb(132, 132, 132);
 }
 
 body {
+    color: #282A35;
     margin:0;
-    background-color: aliceblue;
+    background-color: var(--bg-dark);
     font-family: 'Open Sans', sans-serif;
 }
 article {
     display: flex;
     padding: 40px 0px 15px 0px;
-    background-color: var(--bg-color);
+    background-color: var(--bg-light);
 }
 
 h2 {
-    font-size: 32px;
     padding: 0;
-    margin: 0;
     text-align: right;
 }
 
 .header {
-    background-color: aliceblue;
+    background-color: var(--bg-dark);
     height: 100px;
     margin-top: 0;
     text-align: center;
@@ -54,7 +53,7 @@ h2 {
 }
 
 #navigation a:hover {
-    border-bottom: 3px solid rgba(112, 136, 131, 0.445);
+    border-bottom: 3px solid rgba(21, 198, 160, 0.445);
     background-color: #006741;
 }
 
@@ -77,12 +76,15 @@ h2 {
 .hero {
     background-image: url(../images/tree.jpg);
     height: 300px;
+    filter: brightness(75%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-bottom: 5px solid var(--border-outline);
     font-family: 'Open Sans', sans-serif;
-    filter: brightness(80%);
+}
+
+.hero:hover {
+    filter: brightness(78%);
 }
 
 .hero-text {
@@ -98,17 +100,15 @@ h2 {
 
 /* Title For Articles*/
 .title {
+    color: #282A35;
     flex: 0 0 auto;
     padding: 5px 10px;
-    width: 150px;
-    font-size: 28px;
-    border-right: 3px dotted var(--border-outline);
+    background-color: var(--bg-dark);
 }
 
 /*About me Text */
 .about {
-    font-size: 20px;
-    margin-left: 60px;
+    margin-left: 40px;
 }
 
 #project {
@@ -116,6 +116,33 @@ h2 {
     background-image: url("https://picsum.photos/id/684/600/400");
 }
 
+/* Footer */
+.footer {
+    flex: 1 0 auto;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    bottom: 0;
+    width: 100%;
+    background-color: #282A35;
+    color: #04AA6D;
+    text-decoration: none;
+}
+
+.footer h1 {
+    display: flex;
+    flex: 1;
+    margin: 25px 30px;
+    list-style: none;
+    text-decoration-line: none;
+}
+.footer a {
+    color: #04AA6D;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
 
 /* Responsive Section */
 /* >> 600 Width */
@@ -132,6 +159,18 @@ h2 {
     .info {
         font-size: 32px;
     }
+    h2 {
+        font-size: 32px;
+    }
+    .about {
+        font-size: 20px;
+    }
+    .title {
+        width: 150px;
+        border-right: 12px solid var(--border-outline);
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px ;
+    }
   }
   
   /* << 600 Width */
@@ -147,5 +186,17 @@ h2 {
     }
     .info {
         font-size: 22px;
+    }
+    h2 {
+        font-size : 24px
+    }
+    .about {
+        font-size: 18px;
+    }
+    .title {
+        width: 125px;
+        border-right: 6px solid var(--border-outline);
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px ;
     }
   }
