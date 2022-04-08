@@ -25,7 +25,7 @@ THEN I am presented with a responsive layout that adapts to my viewport
 ## Deployment
 
 Deployment of the Website can be found :
-<br>
+<br> https://officialbeez.github.io/Portfolio/
 
 
 ### Screenshot
