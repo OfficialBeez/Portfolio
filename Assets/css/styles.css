@@ -159,30 +159,22 @@ h2 {
 
 #copyright-timer {
     background-image: url("../images/Copyright-timer.png");
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
+    background-size: cover;
 }
 
 #deck-builder {
     background-image: url("../images/Deck-Builder.png");
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
+    background-size: cover;
 }
 
 #password-gen {
     background-image: url("../images/Refrence.png");
-    margin-bottom: 8px;
-    vertical-align: middle;
-    width: 100%;
+    background-size: cover;
 }
 
 #placeholder {
     background-image: url("../images/720px-Rubik\'s_cube.svg.png");
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
+    background-size: cover;
 }
 
 /* Footer */
@@ -274,8 +266,8 @@ footer a:hover {
         font-size: 16px;
     }
     .projects-bg {
-        flex : 50%;
-        max-width: 0%;
+        flex : 100%;
+        max-width: 100%;
     }
     article h3 {
         font-size: 14px;
