@@ -12,7 +12,6 @@ body {
 }
 article {
     display: flex;
-    padding: 40px 0px 15px 0px;
     background-color: var(--bg-light);
 }
 
@@ -37,7 +36,7 @@ h2 {
     overflow: hidden;
     background-color: #282A35;
     border-bottom: 5px solid var(--border-outline);
-    z-index: 1;
+    z-index: 999;
 }
 #navigation li {
     display: inline;
@@ -110,32 +109,25 @@ h2 {
 /* Projects */
 .projects {
     display: flex;
-    flex-direction: row;
-    flex: wrap;
-    justify-content: space-around;
-    flex: 1 0 0;
-    min-height: 200px;
-    z-index: 1;
+    flex-wrap: wrap;
+    padding: 0 2px;
+    margin: 20px;
+    grid-gap: 50px;
+    height: 800px;
+    width: 1600px;
 }
 
 .project-bg {
-    position: relative;
-    background-size:125%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 2px;
     border: 4px solid #04AA6D;
+    z-index: 1;
     opacity: 50%;
-    max-width: max-content;
+    position: relative;
+    background-color: #006741;
 }
 
-.project-bg::before {
-    background-color: #04AA6D;
-    content:'';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 50%;
-    z-index: -1;
-}
 .project-bg:hover .project-desc {
     opacity: 90%;
 }
@@ -146,7 +138,7 @@ h2 {
 .project-desc { 
     background-color: var(--bg-dark);
     color: #282A35;
-    position: absolute;
+    display: absolute;
     bottom: 20px;
     padding: 15px;
     opacity: 50%;
@@ -157,15 +149,40 @@ h2 {
     height: 100%;
     top:0;
     left:0;  
-    z-index: 1;
+    z-index: 500;
 }
 
+.project-bg:first-child {
+    max-width: 800px;
+}
+
+
 #copyright-timer {
-    background-image: url("../images/copyright-timer-preview.png") no-repeat;
+    background-image: url("../images/Copyright-timer.png");
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
 }
 
 #deck-builder {
     background-image: url("../images/Deck-Builder.png");
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#password-gen {
+    background-image: url("../images/Refrence.png");
+    margin-bottom: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#placeholder {
+    background-image: url("../images/720px-Rubik\'s_cube.svg.png");
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
 }
 
 /* Footer */
@@ -225,12 +242,6 @@ footer a:hover {
     footer {
         font-size: 28px;
     }
-    .main-project {
-        min-width: 350px;
-    }
-    .project-bg {
-        min-width: 300px;
-    }
   }
   
   /* << 600 Width */
@@ -262,19 +273,14 @@ footer a:hover {
     footer {
         font-size: 16px;
     }
-    .main-project {
-        min-width: 200px;
+    .projects-bg {
+        flex : 50%;
+        max-width: 0%;
     }
-    .project-bg {
-        min-width: 150px;
+    article h3 {
+        font-size: 14px;
     }
-  }
-
-  @media screen and (min-width: 1080px) {
-    .project-bg {
-        min-width: 400px;
-    }
-    .main-project {
-        min-width: 550px;
+    article p {
+        font-size: 6px;
     }
   }
